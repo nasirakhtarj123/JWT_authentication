@@ -1,0 +1,30 @@
+# Enable formatting of SQL queries
+spring:
+  jpa:
+    properties:
+      hibernate:
+        format_sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+
+# DataSource Configuration
+  datasource:
+    url: jdbc:postgresql://localhost:5432/jwt
+    username: nazir
+    password: 123456789
+
+# JPA and Hibernate Configuration
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+# Server Configuration
+server:
+  port: 8083
+
+# Other Configurations
+  error:
+    include-message: always
+debug: true
